@@ -1,0 +1,93 @@
+{
+  "fields": [
+    {
+      "metadata": {},
+      "name": "CallNumber",
+      "nullable": true,
+      "type": "integer"
+    },
+    { "metadata": {}, "name": "UnitID", "nullable": true, "type": "string" },
+    {
+      "metadata": {},
+      "name": "IncidentNumber",
+      "nullable": true,
+      "type": "integer"
+    },
+    { "metadata": {}, "name": "CallType", "nullable": true, "type": "string" },
+    { "metadata": {}, "name": "CallDate", "nullable": true, "type": "string" },
+    { "metadata": {}, "name": "WatchDate", "nullable": true, "type": "string" },
+    {
+      "metadata": {},
+      "name": "CallFinalDisposition",
+      "nullable": true,
+      "type": "string"
+    },
+    {
+      "metadata": {},
+      "name": "AvailableDtTm",
+      "nullable": true,
+      "type": "string"
+    },
+    { "metadata": {}, "name": "Address", "nullable": true, "type": "string" },
+    { "metadata": {}, "name": "City", "nullable": true, "type": "string" },
+    { "metadata": {}, "name": "Zipcode", "nullable": true, "type": "integer" },
+    { "metadata": {}, "name": "Battalion", "nullable": true, "type": "string" },
+    {
+      "metadata": {},
+      "name": "StationArea",
+      "nullable": true,
+      "type": "string"
+    },
+    { "metadata": {}, "name": "Box", "nullable": true, "type": "string" },
+    {
+      "metadata": {},
+      "name": "OriginalPriority",
+      "nullable": true,
+      "type": "string"
+    },
+    { "metadata": {}, "name": "Priority", "nullable": true, "type": "string" },
+    {
+      "metadata": {},
+      "name": "FinalPriority",
+      "nullable": true,
+      "type": "integer"
+    },
+    { "metadata": {}, "name": "ALSUnit", "nullable": true, "type": "boolean" },
+    {
+      "metadata": {},
+      "name": "CallTypeGroup",
+      "nullable": true,
+      "type": "string"
+    },
+    { "metadata": {}, "name": "NumAlarms", "nullable": true, "type": "integer" },
+    { "metadata": {}, "name": "UnitType", "nullable": true, "type": "string" },
+    {
+      "metadata": {},
+      "name": "UnitSequenceInCallDispatch",
+      "nullable": true,
+      "type": "integer"
+    },
+    {
+      "metadata": {},
+      "name": "FirePreventionDistrict",
+      "nullable": true,
+      "type": "string"
+    },
+    {
+      "metadata": {},
+      "name": "SupervisorDistrict",
+      "nullable": true,
+      "type": "string"
+    },
+    {
+      "metadata": {},
+      "name": "Neighborhood",
+      "nullable": true,
+      "type": "string"
+    },
+    { "metadata": {}, "name": "Location", "nullable": true, "type": "string" },
+    { "metadata": {}, "name": "RowID", "nullable": true, "type": "string" },
+    { "metadata": {}, "name": "Delay", "nullable": true, "type": "float" }
+  ],
+  "type": "struct"
+}
