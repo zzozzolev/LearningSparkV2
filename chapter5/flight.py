@@ -28,6 +28,11 @@ foo = departure_delays.filter(
 )
 foo.createOrReplaceTempView("foo")
 
+# join
+foo.join(airports_na, airports_na.IATA == foo.origin).select(
+    "City", "State", "date", "delay", "distance", "destination"
+)
+
 # dense_rank
 departure_delays_window = spark.sql(
     """SELECT origin, destination, SUM(delay) AS TotalDelays
