@@ -27,3 +27,25 @@ foo = departure_delays.filter(
     )
 )
 foo.createOrReplaceTempView("foo")
+
+# dense_rank
+departure_delays_window = spark.sql(
+    """SELECT origin, destination, SUM(delay) AS TotalDelays
+    FROM departureDelays
+    WHERE origin IN ('SEA', 'SFO', 'JFK')
+    AND destination IN ('SEA', 'SFO', 'JFK', 'DEN', 'ORD', 'LAX', 'ATL')
+    GROUP BY origin, destination;"""
+)
+departure_delays_window.createOrReplaceTempView("departureDelaysWindow")
+
+spark.sql(
+    """
+    SELECT origin, destination, TotalDelays, rank
+    FROM (
+        SELECT origin, destination, TotalDelays,
+        dense_rank() OVER (PARTITION BY origin ORDER BY TotalDelays DESC) AS rank
+        FROM departureDelaysWindow
+    ) t
+    WHERE rank <= 3
+"""
+)
